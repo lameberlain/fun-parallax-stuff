@@ -1,0 +1,146 @@
+body
+	background-color: #EEE
+	margin: 0
+	font-family: helvetica
+	width: 100vw
+.graphic
+	height: 400px
+	width: 100%
+	position: relative
+	z-index: -1
+	overflow-x: hidden
+	// background-color: red
+.content
+	.copy
+		padding: 20px 110px
+		margin: 0
+		position: relative
+		z-index: 5
+		background-color: #484751
+		text-align: center
+		overflow-x: hidden
+		p
+			font-size: 18px
+			line-height: 26px
+			color: white
+			padding-bottom: 50px
+.hamburger
+	position: absolute
+	right: 15px
+	color: white
+	top: 10px
+	font-size: 28px
+	cursor: pointer
+	&:hover
+		opacity: 0.8
+
+@media screen and (min-width: 800px)
+	.hamburger, .menu__container
+		display: none
+
+.header
+	position: -webkit-sticky
+	position: -moz-sticky
+	position: -ms-sticky
+	position: -o-sticky
+	position: sticky
+	top: 0px
+	width: 100
+	z-index: 10
+	transition: 0.2s ease-in-out
+	background-color: #484751
+	&__title
+		position: relative
+		text-transform: capitalize
+		font-size: 40px
+		padding: 10px
+		margin: 0
+		color: #FFF
+	.menu
+		display: inline-flex
+		&__item
+			padding: 10px
+			font-size: 16px
+			color: white
+			font-weight: bold
+			cursor: pointer
+			&:hover
+				opacity: 0.8
+			flex: 1
+			text-align: center
+@media screen and (max-width: 801px)
+	.header .menu
+		display: none
+.menu__container
+	position: -webkit-sticky
+	position: -moz-sticky
+	position: -ms-sticky
+	position: -o-sticky
+	position: sticky
+	top: 0
+	z-index: 20
+	// transition: 0.8s ease-in-out
+	.menu
+		top: -90px
+		position: absolute
+		right: 0
+		opacity: 0
+		// border-radius: 6px
+		// background-color: rgba(#484751, 0.5)
+		color: white
+		text-align: center
+		width: 100%
+		transition: 0.2s ease-in-out
+		display: flex
+		flex-wrap: wrap
+		-webkit-flex-wrap
+		&__item
+			width: 150px
+			padding: 9px
+			font-size: 20px
+			font-weight: bold
+			cursor: pointer
+			&:hover
+				opacity: 0.8
+#one
+	transition: 0.4s ease-out
+	background-repeat: repeat-x
+	background-image: url('img/1.png')
+	// background-repeat: no-repeat
+	background-position: bottom center
+	background-size: contain
+	position: absolute
+	bottom: -200px
+	width: 130%
+	left: -15%
+	height: 100%
+	z-index: 3
+	opacity: 1
+#two
+	transition: 0.4s ease-out
+	// filter: blur(1px)
+	background-repeat: repeat-x
+	background-image: url('img/2.png')
+	background-position: bottom center
+	background-size: contain
+	position: absolute
+	bottom: -10%
+	width: 130%
+	left: -15%
+	height: 100%
+	z-index: 2
+	opacity: 1
+#three
+	transition: 0.4s ease-out
+	// filter: blur(3px)
+	background-image: url('img/3.png')
+	background-repeat: repeat-x
+	background-position: bottom center
+	background-size: contain
+	position: absolute
+	bottom: 10%
+	left: -15%
+	width: 130%
+	height: 100%
+	z-index: 1
+	opacity: 0.5
